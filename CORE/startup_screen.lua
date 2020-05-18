@@ -1,19 +1,9 @@
 function draw_boot()
   local gfx = love.graphics
+  local t = TRON.state_timer
 
-  gswhite = asset:sprite({'gswhite1.png', 'gswhite2.png', 'gswhite3.png'})
+  local _x,_y = 64,100
+  gfx.draw(gswhite.spriteSheet, gswhite.quads[(math.floor(gswhite.currentTime / gswhite.duration * #gswhite.quads) + 1)], _x, _y, 0, 1)
 
-  local _x,_y = 30,30
-  if (TRON.state_timer>0) then
-    gfx.draw(gswhite[1], _x, _y)
-  elseif (TRON.state_timer>200) then
-    gfx.draw(gswhite[2], _x, _y)
-  elseif (TRON.state_timer>300) then
-    gfx.draw(gswhite[3], _x, _y)
-  elseif (TRON.state_timer>500) then
-    gfx.draw(gswhite[2], _x, _y)
-  end
-  rt = rt + 1
-  print(STATE.s, TRON.state_timer)
-  if (TRON.state_timer>1000) then STATE:shift(1) end
+  if (TRON.state_timer>4) then STATE:shift(1) end
 end

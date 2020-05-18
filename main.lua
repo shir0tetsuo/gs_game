@@ -24,7 +24,14 @@ end
 
 -- _UPDATE timers, controls
 function love.update(dt)
+  -- gamestate clock
+  TRON:increment(dt)
 
+  -- loops
+  gswhite:loop(dt)
+
+  -- debugging
+  if (debug) then print('STATE ' .. STATE.s, 'TRON ' .. TRON.state_timer) end
 end
 
 -- _DRAW
