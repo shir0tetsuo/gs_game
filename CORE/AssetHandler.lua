@@ -10,6 +10,10 @@ function asset:sprite(arr)
   return arr
 end
 
+function asset:slice_sheet(asset,_w,_h,pos)
+  _pos = 0 + (pos*_w)
+  return gfx.newQuad(_pos,0,_w,_h,asset:getWidth(),asset:getHeight())
+end
 
 -- Looping animation modules;
 -- LOAD

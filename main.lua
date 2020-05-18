@@ -18,8 +18,9 @@ end
 -- _LOAD
 function love.load(arg)
   love.resize(gfx.getDimensions())
-  LoadIcon = gfx.newImage('assets/SPRITES/gsyellow.png')
-  GridIcon = LoadIcon
+  -- change to quad loader
+  --LoadIcon = gfx.newImage('assets/SPRITES/gsyellow.png')
+  --GridIcon = LoadIcon
 end
 
 -- _UPDATE timers, controls
@@ -28,7 +29,7 @@ function love.update(dt)
   TRON:increment(dt)
 
   -- loops
-  gswhite:loop(dt)
+  shell_anim:loop(dt)
 
   -- debugging
   if (debug) then print('STATE ' .. STATE.s, 'TRON ' .. TRON.state_timer) end
@@ -60,7 +61,7 @@ function draw_debug()
     for y=0,6 do
       _y = 0 + (y * 32)
       --love.graphics.draw(GridIcon, _x, _y)
-      gfx.draw(GridIcon, _x, _y)
+      gfx.draw(shells[1], gsred, _x, _y)
     end
   end
 end

@@ -1,5 +1,9 @@
 local gfx = love.graphics
 
-gswhite_icons = asset:sprite({'gswhite1.png', 'gswhite2.png', 'gswhite3.png'})
+--useful for SETS of icons.. load array of images to RAM
 
-gswhite = newAnimation(gfx.newImage('assets/SPRITES/gswhite_anim.png'), 32, 32, 1)
+-- SHELLS
+shells = asset:sprite({'shell_set.png'})
+gsred = asset:slice_sheet(shells[1],32,32,6)
+
+shell_anim = newAnimation(gfx.newImage('assets/SPRITES/shell_set.png'), 32, 32, 2)
