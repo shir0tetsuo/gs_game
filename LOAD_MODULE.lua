@@ -1,0 +1,7 @@
+require "CORE/loadstore"
+require "CORE/CHRONOS"
+require "CORE/STATES"
+require "CORE/startup_screen"
+require "CORE/CAMERA"
+require "CORE/AssetArray"
+-- require "CORE/AssetLoader"
