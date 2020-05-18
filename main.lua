@@ -17,6 +17,8 @@ end
 
 -- _LOAD
 function love.load(arg)
+  keys = MapKeys()
+  StringDex = compileStringDex(fr_CA)
   love.resize(gfx.getDimensions())
 end
 
@@ -29,7 +31,7 @@ function love.update(dt)
   shell_anim:loop(dt)
 
   -- debugging
-  if (debug) then print('STATE ' .. STATE.s, 'TRON ' .. TRON.state_timer) end
+  if (debug) then consoleLog() end
 end
 
 -- _DRAW

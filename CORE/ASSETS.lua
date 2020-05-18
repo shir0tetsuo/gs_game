@@ -3,7 +3,7 @@ local gfx = love.graphics
 --useful for SETS of icons.. load array of images to RAM
 
 -- SHELLS
-shells = asset:sprite({'shell_set.png'})
+shells = asset:cluster({'shell_set.png'})
 
 gsred = asset:slice_sheet(shells[1],32,32,6)
 gsyellow = asset:slice_sheet(shells[1],32,32,3)

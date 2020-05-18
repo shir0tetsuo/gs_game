@@ -1,6 +1,6 @@
--- handle variable memory
-LoadIcon = nil
+-- _INIT() Memory
 
+-- var = nil
 
 -- handle canvas
 canvas = love.graphics.newCanvas(320, 240)
