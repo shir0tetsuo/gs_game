@@ -18,7 +18,10 @@ end
 -- _LOAD
 function love.load(arg)
   keys = MapKeys()
-  StringDex = compileStringDex(fr_CA)
+
+  LocLang = en_US
+  StringDex = compileStringDex(LocLang)
+
   love.resize(gfx.getDimensions())
 end
 
